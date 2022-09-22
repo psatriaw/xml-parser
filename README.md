@@ -12,7 +12,7 @@ developing this project -see the [Contributing](#contributing) section.
 * [Copyright and license](#copyright-and-license)
 
 ## Installation
- * composer require jtrumbull/xml-parser
+ * composer require psatriaw/xml-parser
  
 ##Usage
 
@@ -45,7 +45,7 @@ $data = array(
   )
 );
 
-$xml = XMLParser::encode( $data , 'response' );
+$xml = XMLParser::encode( $data , 'response', 'sub_item_name');
 echo $xml->asXML();
 ```
 
