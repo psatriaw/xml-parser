@@ -20,7 +20,7 @@ class XMLParser {
 
   public static $caseSensitive     = false;
 
-  public static function encode ($data, $root = null)
+  public static function encode ($data, $root = null, $item_name = null)
   {
     if ($data instanceof SimpleXMLElement) {
       return $data;
@@ -92,10 +92,11 @@ class XMLParser {
         continue;
       }
       $node = self::_formatName(
-        is_numeric($key) ?
-          (is_array($value) ?
-            self::$_defaultListNode :
-            self::$_defaultItemNode) : $key
+        ($item_name)?$item_name:
+          is_numeric($key) ?
+            (is_array($value) ?
+              self::$_defaultListNode :
+              self::$_defaultItemNode) : $key
       );
       if (is_array($value)) {
         $child = $element->addChild($node);
