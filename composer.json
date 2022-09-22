@@ -8,7 +8,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "XMLParser\\": "lib/XMLParser"
+            "PSWXMLParser\\": "lib/XMLParser"
         }
     }
 }
