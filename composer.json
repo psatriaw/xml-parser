@@ -1,5 +1,5 @@
 {
-    "name": "jtrumbull/xml-parser",
+    "name": "psatriaw/xml-parser",
     "description": "PHP Class that parses XML objects",
     "require": {
         "php": ">=5.3.0",
